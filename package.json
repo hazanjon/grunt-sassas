@@ -1,7 +1,7 @@
 {
   "name": "grunt-sassas",
   "description": "Grunt plugin to take advantage of the SASSAS Direct Conversion API to remove the need to have SASS installed on the local machine",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "http://sassas.uk",
   "author": {
     "name": "Jon Hazan",

@@ -35,13 +35,12 @@ module.exports = function(grunt) {
           done(err);
         } else if (stats.isFile()) {
           var fileSize = stats.size;
-          rest.post('http://sassas.uk/convert', {
+          rest.post('http://sassas.uk/api/convert', {
             multipart: true,
             data: {
               'file': rest.file(filepath, null, fileSize, null, 'text/css')
             }
           }).on('complete', function(data) {
-            console.log(dest);
             fs.mkdirSync('tmp');
             fs.writeFile(dest, data, function(err) {
               if(err) {
