@@ -29,24 +29,14 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
-    assaas: {
-      default_options: {
+    sassas: {
+      dev: {
         options: {
         },
         files: {
           'tmp/main.css': 'test/fixtures/main.scss'
         }
       }
-      /*,
-      custom_options: {
-        options: {
-          separator: ': ',
-          punctuation: ' !!!'
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
-      }*/
     },
 
     // Unit tests.
@@ -66,7 +56,7 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'assaas', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'sassas', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
