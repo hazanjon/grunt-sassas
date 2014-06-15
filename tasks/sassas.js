@@ -1,5 +1,5 @@
 /*
- * grunt-assaas
+ * grunt-sassas
  * hazan.me
  *
  * Copyright (c) 2014 Jon Hazan
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
-  grunt.registerMultiTask('assaas', 'Grunt plugin to take advantage of the ASSAAS Direct Conversion API to remove the need to have SASS installed on the local machine', function() {
+  grunt.registerMultiTask('sassas', 'Grunt plugin to take advantage of the sassas Direct Conversion API to remove the need to have SASS installed on the local machine', function() {
     
     var done = this.async();
     
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
           done(err);
         } else if (stats.isFile()) {
           var fileSize = stats.size;
-          rest.post('http://assaas.hazan.me/convert', {
+          rest.post('http://sassas.uk/convert', {
             multipart: true,
             data: {
               'file': rest.file(filepath, null, fileSize, null, 'text/css')
